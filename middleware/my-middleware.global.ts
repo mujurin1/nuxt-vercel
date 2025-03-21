@@ -3,9 +3,9 @@ export default defineNuxtRouteMiddleware((to) => {
   if (!window?.localStorage)
     return;
 
-  if (to.path === '/abc') {
-    return navigateTo('/');
-  }
+  // if (to.path === '/abc') {
+  //   return navigateTo('/');
+  // }
   return true;
 
   const isSignedIn = JSON.parse(window.localStorage.getItem('isSignedIn') || 'false');
